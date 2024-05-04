@@ -17,7 +17,7 @@ export default function commRating(props)
                 arr.map( (val) =>{
                     console.log("Inside loop");
                     return(
-                            <div className={`star ${(val<=commRating)?"selected":""}`}  onClick={()=>{
+                            <div key={val} className={`star ${(val<=commRating)?"selected":""}`}  onClick={()=>{
                              starHandler(val)
                             }}>&#9734;</div>
                     )

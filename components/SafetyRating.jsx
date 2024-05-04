@@ -17,7 +17,7 @@ export default function safetyRating(props)
                 arr.map( (val) =>{
                     console.log("Inside loop");
                     return(
-                            <div className={`star ${(val<=safetyRating)?"selected":""}`}  onClick={()=>{
+                            <div key={val} className={`star ${(val<=safetyRating)?"selected":""}`}  onClick={()=>{
                              starHandler(val)
                             }}>&#9734;</div>
                     )
